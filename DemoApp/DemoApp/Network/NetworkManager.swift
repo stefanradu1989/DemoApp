@@ -28,19 +28,19 @@ class NetworkManager {
     
     // MARK: - Data List
     
-    func getData(page: String, results: String) {
-        getDataCall(page: page, results: results)
+    func getData(page: String, results: String, completionHandler: @escaping ([Person]?, Error?) -> ()) {
+        getDataCall(page: page, results: results, completionHandler: completionHandler)
     }
     
-    private func getDataCall(page: String, results: String) {
+    func getDataCall(page: String, results: String, completionHandler: @escaping ([Person]?, Error?) -> ()) {
         let url = createDataUrl(page: page, results: results)
         
         Alamofire.request(url).responseJSON { response in
             switch response.result {
             case .success(let value):
-                (results: value as! [AnyObject])
+                completionHandler(self.parseData(data: value as AnyObject), nil)
             case .failure(let error):
-                print("Error while making data request \n Error: \(error.localizedDescription)")
+                completionHandler(nil, error)
             }
         }
     }
@@ -58,5 +58,14 @@ class NetworkManager {
                 completionHandler(nil, error)
             }
         }
+    }
+    
+    
+    // MARK: - Parse Data
+    
+    func parseData(data: AnyObject) -> [Person] {
+        
+        var list: [Person] = []
+        return list
     }
 }

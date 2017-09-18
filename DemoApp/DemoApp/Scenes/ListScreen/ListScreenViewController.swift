@@ -17,6 +17,8 @@ class ListScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         viewModel = ListScreenViewModel()
+        
+        viewModel.getDataForPage(page: "0")
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +37,6 @@ class ListScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.resultList.count
+        return viewModel.resultList.count
     }
 }
