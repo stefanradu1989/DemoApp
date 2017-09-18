@@ -15,6 +15,8 @@
 		988E42CC1F6E935D008A67AF /* ListScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E42CB1F6E935D008A67AF /* ListScreenTableViewCell.swift */; };
 		988E42CE1F6E9587008A67AF /* ListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E42CD1F6E9587008A67AF /* ListScreenViewModel.swift */; };
 		98B373161F6FE3A000C5C6D8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B373151F6FE3A000C5C6D8 /* NetworkManager.swift */; };
+		98B3731A1F6FE7F000C5C6D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B373191F6FE7F000C5C6D8 /* Constants.swift */; };
+		98B3731C1F6FE93B00C5C6D8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3731B1F6FE93B00C5C6D8 /* Person.swift */; };
 		C744CC638F820F5C3264EF09 /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71E41984A1F3335F69CFD83 /* Pods_DemoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		988E42CB1F6E935D008A67AF /* ListScreenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListScreenTableViewCell.swift; path = Scenes/ListScreen/ListScreenTableViewCell.swift; sourceTree = "<group>"; };
 		988E42CD1F6E9587008A67AF /* ListScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListScreenViewModel.swift; path = Scenes/ListScreen/ListScreenViewModel.swift; sourceTree = "<group>"; };
 		98B373151F6FE3A000C5C6D8 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Network/NetworkManager.swift; sourceTree = "<group>"; };
+		98B373191F6FE7F000C5C6D8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Common/Constants.swift; sourceTree = "<group>"; };
+		98B3731B1F6FE93B00C5C6D8 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = DataModel/Person.swift; sourceTree = "<group>"; };
 		A46030F25FB4FAC4C906B8A1 /* Pods-DemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D71E41984A1F3335F69CFD83 /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,6 +79,8 @@
 		988E42B41F6E8FDE008A67AF /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				98B373181F6FE7D400C5C6D8 /* Common */,
+				98B373171F6FE70300C5C6D8 /* DataModel */,
 				988E42C71F6E929D008A67AF /* Scenes */,
 				98B373141F6FE37B00C5C6D8 /* Network */,
 				988E42B51F6E8FDE008A67AF /* AppDelegate.swift */,
@@ -110,6 +116,22 @@
 				98B373151F6FE3A000C5C6D8 /* NetworkManager.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		98B373171F6FE70300C5C6D8 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				98B3731B1F6FE93B00C5C6D8 /* Person.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		98B373181F6FE7D400C5C6D8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				98B373191F6FE7F000C5C6D8 /* Constants.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		C8406A18A0993C3318C6DB5A /* Pods */ = {
@@ -249,7 +271,9 @@
 				988E42CC1F6E935D008A67AF /* ListScreenTableViewCell.swift in Sources */,
 				98B373161F6FE3A000C5C6D8 /* NetworkManager.swift in Sources */,
 				988E42CA1F6E92C6008A67AF /* ListScreenViewController.swift in Sources */,
+				98B3731C1F6FE93B00C5C6D8 /* Person.swift in Sources */,
 				988E42B61F6E8FDE008A67AF /* AppDelegate.swift in Sources */,
+				98B3731A1F6FE7F000C5C6D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
