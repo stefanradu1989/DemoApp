@@ -13,10 +13,22 @@ class ListScreenViewController: UIViewController, UITableViewDelegate, UITableVi
 
     private var viewModel: ListScreenViewModel!
     
+    
+    //MARK: - IBAction/IBOutlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    //MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewModel = ListScreenViewModel()
+        
+        viewModel.onGettingData = {
+            self.tableView.reloadData()
+        }
         
         viewModel.getDataForPage(page: "0")
     }

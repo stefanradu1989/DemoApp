@@ -13,6 +13,8 @@ class ListScreenViewModel {
     
     // list of persons received trough network call
     var resultList: [Person]
+    var onGettingData: ((Void) -> ())?
+    
     
     init() {
         resultList = []
@@ -23,9 +25,12 @@ class ListScreenViewModel {
     
     func getDataForPage(page: String) {
         
-        let completionHandler: ([Person]?, Error?)->Void = { value, error in
-            if error != nil {
-                self.resultList = value!
+        let completionHandler: ([Person]?, Error?) -> Void = { value, error in
+            if let value = value {
+                if value.count > 0 {
+                    self.resultList = value
+                    self.onGettingData?()
+                }
             } else {
                 print(error!.localizedDescription)
             }

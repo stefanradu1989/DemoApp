@@ -16,7 +16,7 @@ enum Constants {
     var value: String {
         switch self {
         case .Results:
-            return "100"
+            return "10"
         }
     }
     
