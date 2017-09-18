@@ -11,6 +11,18 @@ import UIKit
 
 class ListScreenTableViewCell: UITableViewCell {
 
+    
+    // MARK: IBOutlet/IBAction
+    
+    @IBOutlet weak var personPhoto: UIImageView!
+    
+    @IBOutlet weak var personName: UILabel!
+
+    @IBOutlet weak var personDetail: UILabel!
+    
+    
+    // MARK: Cell Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

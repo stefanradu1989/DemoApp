@@ -45,6 +45,10 @@ class ListScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "listScreenTableViewCell", for: indexPath) as! ListScreenTableViewCell
         
         // Configure the cell...
+        let personNameDetails = viewModel.resultList[indexPath.row].namedetails
+        cell.personName.text = "\(personNameDetails.first) \(personNameDetails.last)"
+        cell.personDetail.text = " from \(viewModel.resultList[indexPath.row].nationality)"
+        
         return cell
     }
     
