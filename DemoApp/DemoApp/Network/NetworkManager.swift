@@ -74,7 +74,7 @@ class NetworkManager {
             let personPicture = person["picture"] as JSON
             let pictureUrls = PictureUrls(large: personPicture["large"].stringValue, medium: personPicture["medium"].stringValue, thumbnail: personPicture["thumbnail"].stringValue)
             
-            let personListItem = Person(gender: person["gender"].stringValue, namedetails: nameDetails, locationDetails: locationDetail, email: person["email"].stringValue, loginDetails: loginDetails, dob: person["dob"].stringValue, registered: person["registered"].stringValue, phone: person["phone"].stringValue, cell: person["cell"].stringValue, idDetails: idDetail, pictureUrls: pictureUrls, nationality: person["nat"].stringValue)
+            let personListItem = Person(gender: person["gender"].stringValue, nameDetails: nameDetails, locationDetails: locationDetail, email: person["email"].stringValue, loginDetails: loginDetails, dob: person["dob"].stringValue, registered: person["registered"].stringValue, phone: person["phone"].stringValue, cell: person["cell"].stringValue, idDetails: idDetail, pictureUrls: pictureUrls, nationality: person["nat"].stringValue)
             
             list.append(personListItem)
         }

@@ -14,7 +14,7 @@ import UIKit
 struct Person {
     
     var gender: String
-    var namedetails: NameDetails
+    var nameDetails: NameDetails
     var locationDetails: LocationDetails
     var email: String
     var loginDetails: LoginDetails
@@ -26,10 +26,10 @@ struct Person {
     var pictureUrls: PictureUrls
     var nationality: String
     
-    init(gender: String, namedetails: NameDetails, locationDetails: LocationDetails, email: String, loginDetails: LoginDetails, dob: String, registered: String, phone: String, cell: String, idDetails: IdDetails, pictureUrls: PictureUrls, nationality: String) {
+    init(gender: String, nameDetails: NameDetails, locationDetails: LocationDetails, email: String, loginDetails: LoginDetails, dob: String, registered: String, phone: String, cell: String, idDetails: IdDetails, pictureUrls: PictureUrls, nationality: String) {
         
         self.gender = gender
-        self.namedetails = namedetails
+        self.nameDetails = nameDetails
         self.locationDetails = locationDetails
         self.email = email
         self.loginDetails = loginDetails
@@ -115,17 +115,11 @@ struct PictureUrls {
     var large: String
     var medium: String
     var thumbnail: String
-    var largeImage: UIImage?
-    var mediumImage: UIImage?
-    var thumbnailImage: UIImage?
     
     init(large: String, medium: String, thumbnail: String) {
         
         self.large = large
         self.medium = medium
         self.thumbnail = thumbnail
-        self.largeImage = nil
-        self.mediumImage = nil
-        self.thumbnailImage = nil
     }
 }

@@ -63,12 +63,12 @@ class ListScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         
         // Get person details
         let person = viewModel.resultList[indexPath.row]
-        let personNameDetails = person.namedetails
+        let personNameDetails = person.nameDetails
         let personPhotoUrls = person.pictureUrls
         
         // Configure the cell
         cell.selectionStyle = .none
-        cell.personName.text = "\(personNameDetails.first) \(personNameDetails.last)"
+        cell.personName.text = "\(person.nameDetails.first) \(personNameDetails.last)"
         cell.personDetail.text = "\(DateFormatter.getAgeFromDob(dob: person.dob)) years from \(viewModel.resultList[indexPath.row].nationality)"
         
         cell.personPhoto.af_setImage(withURL: URL(string: personPhotoUrls.thumbnail)!)
