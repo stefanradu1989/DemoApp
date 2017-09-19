@@ -43,12 +43,18 @@ extension Router {
     }
 }
 
-
+// Storyboard Identifiers
 enum StoryboardId: String {
     case main = "MainStoryboard"
 }
 
+// View Controller Identifiers
 enum ViewControllerId: String {
     case listVc = "ListScreenViewControllerId"
     case detailVc = "DetailScreenViewControllerId"
+}
+
+// Segue Identifiers
+enum SegueId: String {
+    case listToDetail = "listToDetailSegueId"
 }
