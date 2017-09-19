@@ -12,11 +12,14 @@ import Foundation
 enum Constants {
     
     case Results
+    case LastPage
     
-    var value: String {
+    var value: Int {
         switch self {
         case .Results:
-            return "10"
+            return 100
+        case .LastPage:
+            return 2
         }
     }
     
