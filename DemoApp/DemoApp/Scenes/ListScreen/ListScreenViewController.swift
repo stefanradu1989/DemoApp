@@ -10,6 +10,8 @@ import UIKit
 
 
 class ListScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var detailPerson: Person!
 
     private var viewModel: ListScreenViewModel!
     
@@ -84,7 +86,10 @@ class ListScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SegueId.listToDetail.rawValue {
             if let destVC = segue.destination as? DetailScreenViewController {
-//                destVC.person = 
+                if let cell = sender as? ListScreenTableViewCell {
+                    let cellIndexPath = tableView.indexPath(for: cell)
+                    destVC.person = viewModel.resultList[cellIndexPath!.row]
+                }
             }
         }
     }

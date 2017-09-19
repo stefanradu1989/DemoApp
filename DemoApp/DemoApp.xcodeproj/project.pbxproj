@@ -19,7 +19,6 @@
 		98B3731C1F6FE93B00C5C6D8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B3731B1F6FE93B00C5C6D8 /* Person.swift */; };
 		98B7820E1F7043C5003E14DB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7820D1F7043C5003E14DB /* Date+Extension.swift */; };
 		98B782101F704532003E14DB /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7820F1F704532003E14DB /* DateFormatter+Extension.swift */; };
-		98B782131F71128C003E14DB /* DetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B782121F71128C003E14DB /* DetailScreenViewModel.swift */; };
 		98B782151F712E8D003E14DB /* ListScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B782141F712E8D003E14DB /* ListScreenRouter.swift */; };
 		98B782171F712F99003E14DB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B782161F712F99003E14DB /* Router.swift */; };
 		98B782191F713376003E14DB /* DetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B782181F713376003E14DB /* DetailScreenViewController.swift */; };
@@ -42,7 +41,6 @@
 		98B3731B1F6FE93B00C5C6D8 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = DataModel/Person.swift; sourceTree = "<group>"; };
 		98B7820D1F7043C5003E14DB /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Extension.swift"; path = "Extensions/Date+Extension.swift"; sourceTree = "<group>"; };
 		98B7820F1F704532003E14DB /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Extension.swift"; path = "Extensions/DateFormatter+Extension.swift"; sourceTree = "<group>"; };
-		98B782121F71128C003E14DB /* DetailScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScreenViewModel.swift; path = Scenes/DetailScreen/DetailScreenViewModel.swift; sourceTree = "<group>"; };
 		98B782141F712E8D003E14DB /* ListScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListScreenRouter.swift; path = Scenes/ListScreen/ListScreenRouter.swift; sourceTree = "<group>"; };
 		98B782161F712F99003E14DB /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Common/Router.swift; sourceTree = "<group>"; };
 		98B782181F713376003E14DB /* DetailScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScreenViewController.swift; path = Scenes/DetailScreen/DetailScreenViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 		98B782111F71126A003E14DB /* DetailScreen */ = {
 			isa = PBXGroup;
 			children = (
-				98B782121F71128C003E14DB /* DetailScreenViewModel.swift */,
 				98B782181F713376003E14DB /* DetailScreenViewController.swift */,
 			);
 			name = DetailScreen;
@@ -313,7 +310,6 @@
 				98B7820E1F7043C5003E14DB /* Date+Extension.swift in Sources */,
 				988E42B61F6E8FDE008A67AF /* AppDelegate.swift in Sources */,
 				98B3731A1F6FE7F000C5C6D8 /* Constants.swift in Sources */,
-				98B782131F71128C003E14DB /* DetailScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

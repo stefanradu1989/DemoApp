@@ -42,13 +42,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1k-ky-Cyw">
-                                                    <rect key="frame" x="79" y="0.0" width="296" height="21"/>
+                                                    <rect key="frame" x="87" y="0.0" width="288" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdk-WX-Yna">
-                                                    <rect key="frame" x="79" y="21" width="296" height="58.5"/>
+                                                    <rect key="frame" x="87" y="21" width="288" height="58.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -58,11 +58,11 @@
                                                 <constraint firstItem="vdk-WX-Yna" firstAttribute="top" secondItem="J1k-ky-Cyw" secondAttribute="bottom" id="1mf-ei-WWc"/>
                                                 <constraint firstItem="J1k-ky-Cyw" firstAttribute="top" secondItem="vpb-1t-4f4" secondAttribute="top" id="2if-HR-e7q"/>
                                                 <constraint firstAttribute="trailing" secondItem="vdk-WX-Yna" secondAttribute="trailing" id="N8B-BS-iem"/>
-                                                <constraint firstItem="J1k-ky-Cyw" firstAttribute="leading" secondItem="5iE-lS-7Gr" secondAttribute="trailing" id="QAt-ne-jrw"/>
+                                                <constraint firstItem="J1k-ky-Cyw" firstAttribute="leading" secondItem="5iE-lS-7Gr" secondAttribute="trailing" constant="8" id="QAt-ne-jrw"/>
                                                 <constraint firstAttribute="bottom" secondItem="5iE-lS-7Gr" secondAttribute="bottom" id="RQu-ZI-HLl"/>
-                                                <constraint firstItem="J1k-ky-Cyw" firstAttribute="leading" secondItem="vdk-WX-Yna" secondAttribute="leading" id="X5b-RZ-KHs"/>
                                                 <constraint firstItem="5iE-lS-7Gr" firstAttribute="top" secondItem="vpb-1t-4f4" secondAttribute="top" id="bT4-5q-0aO"/>
                                                 <constraint firstAttribute="bottom" secondItem="vdk-WX-Yna" secondAttribute="bottom" id="e8y-JH-beX"/>
+                                                <constraint firstItem="vdk-WX-Yna" firstAttribute="leading" secondItem="5iE-lS-7Gr" secondAttribute="trailing" constant="8" id="fp8-8R-0mu"/>
                                                 <constraint firstItem="5iE-lS-7Gr" firstAttribute="leading" secondItem="vpb-1t-4f4" secondAttribute="leading" id="kHE-5e-dbv"/>
                                                 <constraint firstAttribute="trailing" secondItem="J1k-ky-Cyw" secondAttribute="trailing" id="s0z-eW-Ywe"/>
                                             </constraints>

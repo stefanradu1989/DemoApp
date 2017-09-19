@@ -11,13 +11,9 @@ import UIKit
 class DetailScreenViewController: UIViewController {
     
     var person: Person!
-    
-    private var viewModel: DetailScreenViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel = DetailScreenViewModel()
     }
 
     override func didReceiveMemoryWarning() {
