@@ -13,6 +13,8 @@ class ListScreenViewController: UIViewController, UITableViewDelegate, UITableVi
 
     private var viewModel: ListScreenViewModel!
     
+    private var listScreenRouter: ListScreenRouter!
+    
     
     //MARK: - IBAction/IBOutlets
     
@@ -24,13 +26,15 @@ class ListScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        listScreenRouter = ListScreenRouter()
+        
         viewModel = ListScreenViewModel()
         
-        viewModel.onGettingData = {
+        viewModel.onFinishedDownloadingData = {
             self.tableView.reloadData()
         }
         
-        viewModel.getDataForPage(page: "0")
+        viewModel.getDataForPage(page: viewModel.lastPageLoaded)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,15 +48,44 @@ class ListScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listScreenTableViewCell", for: indexPath) as! ListScreenTableViewCell
         
-        // Configure the cell...
-        let personNameDetails = viewModel.resultList[indexPath.row].namedetails
+        // Check if the user is at last cell
+        if indexPath.row == viewModel.resultList.count - 1 {
+            
+            // Check if the last page has been loaded
+            if viewModel.lastPageLoaded < Constants.LastPage.value {
+            
+                viewModel.lastPageLoaded += 1
+                viewModel.getDataForPage(page: viewModel.lastPageLoaded)
+            }
+        }
+        
+        // Get person details
+        let person = viewModel.resultList[indexPath.row]
+        let personNameDetails = person.namedetails
+        let personPhotoUrls = person.pictureUrls
+        
+        // Configure the cell
+        cell.selectionStyle = .none
         cell.personName.text = "\(personNameDetails.first) \(personNameDetails.last)"
-        cell.personDetail.text = " from \(viewModel.resultList[indexPath.row].nationality)"
+        cell.personDetail.text = "\(DateFormatter.getAgeFromDob(dob: person.dob)) years from \(viewModel.resultList[indexPath.row].nationality)"
+        
+        cell.personPhoto.af_setImage(withURL: URL(string: personPhotoUrls.thumbnail)!)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.resultList.count
+    }
+    
+    
+    // MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueId.listToDetail.rawValue {
+            if let destVC = segue.destination as? DetailScreenViewController {
+//                destVC.person = 
+            }
+        }
     }
 }

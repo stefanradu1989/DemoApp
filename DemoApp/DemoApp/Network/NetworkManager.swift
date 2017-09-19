@@ -14,25 +14,29 @@ import Foundation
 
 class NetworkManager {
     
+    var list: [Person]
+    
     // Create Singleton Instance
     static let instance = NetworkManager()
-    private init() {}
+    private init() {
+        list = []
+    }
     
     /*
      * Method used to create desired URL for data fetch
      */
-    func createDataUrl(page: String, results: String) -> String {
+    func createDataUrl(page: Int, results: Int) -> String {
         return "https://randomuser.me/api/?page=\(page)&results=\(results)&seed=abc"
     }
     
     
     // MARK: - Data List
     
-    func getData(page: String, results: String, completionHandler: @escaping ([Person]?, Error?) -> ()) {
+    func getData(page: Int, results: Int, completionHandler: @escaping ([Person]?, Error?) -> ()) {
         getDataCall(page: page, results: results, completionHandler: completionHandler)
     }
     
-    func getDataCall(page: String, results: String, completionHandler: @escaping ([Person]?, Error?) -> ()) {
+    func getDataCall(page: Int, results: Int, completionHandler: @escaping ([Person]?, Error?) -> ()) {
         let url = createDataUrl(page: page, results: results)
         
         Alamofire.request(url).responseJSON { response in
@@ -47,26 +51,11 @@ class NetworkManager {
     }
     
     
-    // MARK: - Photos
-    
-    func getPhoto(imageurl: String, completionHandler: @escaping (UIImage?, Error?) -> ()) {
-        
-        Alamofire.request(imageurl).responseImage { response in
-            switch response.result{
-            case .success(let value):
-                completionHandler(value, nil)
-            case .failure(let error):
-                completionHandler(nil, error)
-            }
-        }
-    }
-    
-    
     // MARK: - Parse Data
     
     func parseData(json: JSON) -> [Person] {
         
-        var list: [Person] = []
+        
         
         for person in json["results"].array! {
             

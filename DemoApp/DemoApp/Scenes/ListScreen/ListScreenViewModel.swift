@@ -7,29 +7,32 @@
 //
 
 import Foundation
+import UIKit
 
 
 class ListScreenViewModel {
     
     // list of persons received trough network call
+    var lastPageLoaded: Int
     var resultList: [Person]
-    var onGettingData: ((Void) -> ())?
+    var onFinishedDownloadingData: ((Void) -> ())?
     
     
     init() {
         resultList = []
+        lastPageLoaded = 0
     }
     
     
-    // MARK: Fetch Data
+    // MARK: - Fetch Data
     
-    func getDataForPage(page: String) {
+    func getDataForPage(page: Int) {
         
         let completionHandler: ([Person]?, Error?) -> Void = { value, error in
             if let value = value {
                 if value.count > 0 {
                     self.resultList = value
-                    self.onGettingData?()
+                    self.onFinishedDownloadingData?()
                 }
             } else {
                 print(error!.localizedDescription)
