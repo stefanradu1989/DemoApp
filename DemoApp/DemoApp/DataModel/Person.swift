@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 // Struct used for capturing data for a Person
@@ -114,11 +115,17 @@ struct PictureUrls {
     var large: String
     var medium: String
     var thumbnail: String
+    var largeImage: UIImage?
+    var mediumImage: UIImage?
+    var thumbnailImage: UIImage?
     
     init(large: String, medium: String, thumbnail: String) {
         
         self.large = large
         self.medium = medium
         self.thumbnail = thumbnail
+        self.largeImage = nil
+        self.mediumImage = nil
+        self.thumbnailImage = nil
     }
 }
